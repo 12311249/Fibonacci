@@ -9,14 +9,14 @@ using namespace std;
 using namespace std;
 
 string fibonacci(int n) {
-    int a = 0, b = 1, siguiente;
-    string resultado = "serie de Fibonacci  " + string(1, '0' + n) + " términos:\n"; // Inicializamos el string
+    int a = 0, b = 1, LD;
+    string resultado = "serie de Fibonacci  " + string(1, '0' + n) + " términos:\n";
 
     for (int i = 0; i < n; ++i) {
-        resultado += "Paso " + string(1, '0' + (i + 1)) + ": " + string(1, '0' + a) + "\n"; // Concatenamos números como caracteres
-        siguiente = a + b;
+        resultado += "Paso " + string(1, '0' + (i + 1)) + ": " + string(1, '0' + a) + "\n";
+        LD = a + b;
         a = b;
-        b = siguiente;
+        b = LD;
     }
 
     return resultado;
